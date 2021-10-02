@@ -1,24 +1,13 @@
-import { styled, useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from "@material-ui/icons/Menu";
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import { ChevronLeft, ChevronRight } from '@material-ui/icons';
-
-
-import { useHistory } from 'react-router';
 import { FunctionComponent, useState } from 'react';
+import { useHistory } from 'react-router';
+import { Box, Drawer,  CssBaseline, Toolbar, List, Typography, Divider, 
+  IconButton,ListItem ,ListItemText,styled, useTheme, AppBarProps as MuiAppBarProps } from '@mui/material';
+import MuiAppBar from '@mui/material/AppBar';
+import MenuIcon from "@material-ui/icons/Menu";
+import { ChevronLeft, ChevronRight   } from '@material-ui/icons';
 
 
-const Navbar: FunctionComponent = () => {
+const HomeLayout: FunctionComponent = () => {
   const drawerWidth = 220;
 
   interface AppBarProps extends MuiAppBarProps {
@@ -164,4 +153,4 @@ const Navbar: FunctionComponent = () => {
   );
 }
 
-export default Navbar;
+export default HomeLayout;
