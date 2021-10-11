@@ -4,15 +4,47 @@ import Toolbar from "@material-ui/core/Toolbar";
 import { Typography } from "@mui/material";
 import { FunctionComponent } from "react";
 import Drawer from "../Menu";
+import { useHistory } from "react-router";
+// import { List, ListItem, ListItemText } from "@mui/material";
+
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  root: {
+    position: "sticky",
+    background: "none",
+    boxShadow: "none",
+  },
+});
 
 const Header: FunctionComponent = () => {
+  const history = useHistory();
+  const classes = useStyles();
   return (
     <>
-      <AppBar position="sticky" style={{ background: "#202020" }}>
+      <AppBar className={classes.root}>
         <Toolbar>
           <Drawer />
           <Box>
-            <Typography variant="h6" noWrap component="div">
+            {/* <List>
+              <ListItem
+                button
+                key="Reach Me"
+                onClick={() => {
+                  history.push("/");
+                }}
+              >
+                <ListItemText primary={"Reach Me"} />
+              </ListItem>
+            </List> */}
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              onClick={() => {
+                history.push("/");
+              }}
+            >
               Reach Me
             </Typography>
           </Box>

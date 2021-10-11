@@ -1,10 +1,11 @@
+import { Box } from "@mui/system";
 import { FunctionComponent } from "react";
 
 const Signup: FunctionComponent = () => {
   return (
-    <div>
+    <Box>
       <h1>Signup</h1>
-    </div>
+    </Box>
   );
 };
 

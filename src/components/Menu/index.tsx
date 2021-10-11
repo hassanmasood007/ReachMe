@@ -13,19 +13,20 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 
+const useStyles = makeStyles({
+  list: {
+    width: 250,
+  },
+});
+
 const Drawer: FunctionComponent = () => {
-  const history = useHistory();
-  const useStyles = makeStyles({
-    list: {
-      width: 250,
-    },
-  });
   const [open, setOpen] = useState<boolean>(false);
   const classes = useStyles();
+  const history = useHistory();
   const menuItems = [
     {
       text: "Home",
-      path: "/",
+      path: "/home",
     },
     {
       text: "Profile",
