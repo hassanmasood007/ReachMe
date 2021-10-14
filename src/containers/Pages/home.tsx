@@ -1,8 +1,9 @@
+import { Box } from "@mui/system";
 import { FunctionComponent } from "react";
 
 const Home: FunctionComponent = () => {
   return (
-    <div>
+    <Box>
       <h1>Home</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
@@ -10,7 +11,7 @@ const Home: FunctionComponent = () => {
         et earum adipisci. Labore corrupti dicta excepturi laudantium
         perferendis.
       </p>
-    </div>
+    </Box>
   );
 };
 
