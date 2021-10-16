@@ -1,6 +1,5 @@
 import { Box } from "@mui/system";
 import { FunctionComponent } from "react";
-
 const Home: FunctionComponent = () => {
   return (
     <Box>
