@@ -1,0 +1,14 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches: [develop, staging, master]
+
+jobs:
+  ci/cd:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - run: npm lint
+      - run: npm run built
