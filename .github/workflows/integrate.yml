@@ -5,10 +5,10 @@ on:
     branches: [develop, staging, master]
 
 jobs:
-  ci/cd:
+  continuous-integration:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: npm ci
-      - run: npm lint
+      - run: npm run lint
       - run: npm run built
