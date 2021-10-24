@@ -1,10 +1,11 @@
 import { FunctionComponent } from "react";
+import SignUpForm from "../../components/Forms/SignUpForm";
 
 const Signup: FunctionComponent = () => {
   return (
-    <div>
-      <h1>Signup</h1>
-    </div>
+    <>
+      <SignUpForm />
+    </>
   );
 };
 
