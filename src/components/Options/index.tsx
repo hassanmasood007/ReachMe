@@ -6,6 +6,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import CommentIcon from "@mui/icons-material/Comment";
 import { Box } from "@mui/system";
 import { Button } from "@material-ui/core";
+import { useTheme, useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -13,14 +14,15 @@ const useStyles = makeStyles({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginLeft: "3.5rem",
-    marginRight: "4rem",
+    marginLeft: "2rem",
+    marginRight: "2rem",
   },
 });
 
 const Options: FunctionComponent = () => {
   const classes = useStyles();
-
+  const theme = useTheme();
+  const showText = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <Box className={classes.root}>
       <Button
@@ -28,7 +30,7 @@ const Options: FunctionComponent = () => {
         style={{ textTransform: "lowercase" }}
         startIcon={<ThumbUpIcon />}
       >
-        <Typography>like</Typography>
+        {showText && <Typography>like</Typography>}
       </Button>
 
       <Button
@@ -36,7 +38,7 @@ const Options: FunctionComponent = () => {
         style={{ textTransform: "lowercase" }}
         startIcon={<CommentIcon />}
       >
-        <Typography>comment</Typography>
+        {showText && <Typography>comment</Typography>}
       </Button>
 
       <Button
@@ -44,7 +46,7 @@ const Options: FunctionComponent = () => {
         style={{ textTransform: "lowercase" }}
         startIcon={<ShareIcon />}
       >
-        <Typography>share</Typography>
+        {showText && <Typography>share</Typography>}
       </Button>
     </Box>
   );

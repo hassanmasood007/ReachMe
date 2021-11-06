@@ -11,8 +11,7 @@ import Drawer from "../Menu";
 const useStyles = makeStyles({
   root: {
     position: "sticky",
-    background: "none",
-    boxShadow: "none",
+    background: "#22252B",
   },
   cursor: {
     cursor: "pointer",

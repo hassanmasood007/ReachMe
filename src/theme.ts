@@ -129,7 +129,7 @@ const darkTheme = createTheme({
     },
     body2: {
       fontWeight: 400,
-      fontSize: "1.2rem",
+      fontSize: "1.1rem",
       lineHeight: "2rem",
     },
     caption: {

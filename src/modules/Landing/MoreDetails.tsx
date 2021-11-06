@@ -10,8 +10,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "center",
     minHeight: "100vh",
-    paddingRight: 250,
-    paddingLeft: 250,
+    padding: 50,
   },
 });
 
