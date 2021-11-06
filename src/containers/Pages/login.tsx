@@ -1,10 +1,10 @@
 import { Box } from "@mui/system";
 import { FunctionComponent } from "react";
-
+import LoginForm from "../../components/Forms/LoginForm";
 const Login: FunctionComponent = () => {
   return (
     <Box>
-      <h1>Login</h1>
+      <LoginForm />
     </Box>
   );
 };
