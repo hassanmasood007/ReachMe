@@ -9,6 +9,7 @@ import Search from "../../modules/Feed/search";
 const useStyles = makeStyles({
   root: {
     overflowX: "hidden",
+    marginTop: 10,
   },
 });
 

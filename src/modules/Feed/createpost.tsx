@@ -14,7 +14,7 @@ const Input = styled("input")({
   display: "none",
 });
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     borderRadius: "15px",
     boxShadow: "0px 5px 9px -7px rgba(0, 0, 0, 0.75)",
@@ -27,21 +27,33 @@ const useStyles = makeStyles({
   },
   field: {
     paddingLeft: "1rem",
+    marginTop: "0.5rem",
   },
   options: {
     display: "flex",
     justifyContent: "space-between",
-    flexDirection: "row",
     alignItems: "center",
-    marginBottom: 9,
-    margin: "20px",
+    margin: 0,
+    paddingRight: 40,
+    paddingLeft: 40,
+    [theme.breakpoints.up("xs")]: {
+      flexDirection: "column",
+    },
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "row",
+    },
   },
   title: {
     color: "white",
   },
-});
+  resize: {
+    fontSize: 20,
+  },
+}));
+
 const CreatePost: FunctionComponent = () => {
   const classes = useStyles();
+
   return (
     <Box className={classes.root}>
       <Box className={classes.main}>
@@ -52,10 +64,16 @@ const CreatePost: FunctionComponent = () => {
           className="rounded-circle mr-3"
         />
         <TextField
+          InputProps={{
+            classes: {
+              input: classes.resize,
+            },
+          }}
           className={classes.field}
           fullWidth
           placeholder="What's on your mind?"
           variant="outlined"
+          size="small"
         ></TextField>
       </Box>
       <Box className={classes.options}>
@@ -64,7 +82,9 @@ const CreatePost: FunctionComponent = () => {
           style={{ textTransform: "lowercase" }}
           startIcon={<VideocamIcon color="error" />}
         >
-          <Typography className={classes.title}>Live/Video</Typography>
+          <Typography variant="body2" className={classes.title}>
+            Live/Video
+          </Typography>
         </Button>
 
         <label htmlFor="contained-button-file">
@@ -80,7 +100,9 @@ const CreatePost: FunctionComponent = () => {
             startIcon={<PhotoLibraryIcon color="success" />}
             component="span"
           >
-            <Typography className={classes.title}>Photo/Video</Typography>
+            <Typography variant="body2" className={classes.title}>
+              Photo/Video
+            </Typography>
           </Button>
         </label>
 
@@ -89,7 +111,9 @@ const CreatePost: FunctionComponent = () => {
           style={{ textTransform: "lowercase" }}
           startIcon={<InsertEmoticonIcon style={{ color: "yellow" }} />}
         >
-          <Typography className={classes.title}>Feeling/Activity</Typography>
+          <Typography variant="body2" className={classes.title}>
+            Feeling/Activity
+          </Typography>
         </Button>
       </Box>
     </Box>

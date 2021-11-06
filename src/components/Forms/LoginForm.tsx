@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Input from "../../components/Input/Input";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import { Grid, Typography } from "@mui/material";
-import React from "react";
 
 const LoginForm: FunctionComponent = () => {
   return (
