@@ -14,6 +14,9 @@ const useStyles = makeStyles({
     background: "none",
     boxShadow: "none",
   },
+  cursor: {
+    cursor: "pointer",
+  },
 });
 
 const Header: FunctionComponent = () => {
@@ -24,7 +27,7 @@ const Header: FunctionComponent = () => {
       <AppBar className={classes.root}>
         <Toolbar>
           <Drawer />
-          <Box>
+          <Box className={classes.cursor}>
             <Typography
               variant="h6"
               noWrap
