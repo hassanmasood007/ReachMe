@@ -1,33 +1,27 @@
-import { TextField } from "@mui/material";
-import { FunctionComponent } from "react";
-
-interface IProps {
-  type: string;
-  label: string;
-  color:
-    | "error"
-    | "primary"
-    | "secondary"
-    | "info"
-    | "success"
-    | "warning"
-    | undefined;
-}
-
-const Input: FunctionComponent<IProps> = (props: IProps) => {
-  return (
-    <>
-      <TextField
-        required
-        id="outlined-password-input"
-        label={props.label}
-        type={props.type}
-        color={props.color}
-        autoComplete="current-password"
-        style={{ width: "34vw" }}
-      />
-    </>
-  );
-};
+/* eslint-disable no-unused-labels */
+import { TextField, withStyles } from "@material-ui/core";
+// eslint-disable-next-line
+const Input = withStyles((theme) => ({
+  root: {
+    background: "inherit",
+    "& label.Mui-focused": {
+      color: "white",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "white",
+    },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "white",
+      },
+      "&:hover fieldset": {
+        borderColor: "white",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "white",
+      },
+    },
+  },
+}))(TextField);
 
 export default Input;
