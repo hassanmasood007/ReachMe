@@ -11,7 +11,7 @@ import Drawer from "../Menu";
 const useStyles = makeStyles({
   root: {
     position: "sticky",
-    background: "none",
+    background: "#FFA500",
     boxShadow: "none",
   },
 });

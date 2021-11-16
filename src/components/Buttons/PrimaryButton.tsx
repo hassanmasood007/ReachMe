@@ -5,10 +5,9 @@ const PrimaryButton = withStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.primary.main,
     borderRadius: "2px",
-    width: "max-content",
-    fontWeight: 500,
+    fontWeight: 600,
     padding: "8px 26px",
-    color: "white",
+    color: "black",
     fontSize: "14px",
     "&:hover": {
       backgroundColor: theme.palette.primary.dark,
